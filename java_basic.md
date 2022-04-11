@@ -12,11 +12,13 @@
     ```
     
   2. map的复制：
+   
    ```java
        materialsMap.replaceAll((i, v) -> materialsMapCopy.get(i));
-    ```
+   ```
 
 3.计算整数对应的二进制中1的个数：
+
    ```java
       Integer.bitCount(i)
    ```
