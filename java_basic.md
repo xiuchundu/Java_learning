@@ -18,5 +18,5 @@
 
 3.计算整数对应的二进制中1的个数：
    ```java
-   Integer.bitCount(i)
+      Integer.bitCount(i)
    ```
