@@ -22,3 +22,18 @@
    ```java
       Integer.bitCount(i)
    ```
+4.使用box去除list中的值：
+   ```java
+        public boolean remove(int val) {
+            if (map.containsKey(val)) {
+                IntStream.range(0,list.size()).filter(i->
+                    list.get(i).equals(val)).
+                    boxed().findFirst().map(i->list.remove((int)i));
+                return true;
+            }
+
+            return false;
+        }
+   ```
+   
+   
