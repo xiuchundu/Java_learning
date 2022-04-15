@@ -22,7 +22,7 @@
    ```java
       Integer.bitCount(i)
    ```
-4.使用box去除list中的值：
+4. 使用box去除list中的值：
    ```java
         public boolean remove(int val) {
             if (map.containsKey(val)) {
@@ -36,4 +36,5 @@
         }
    ```
    
+   5. 使用Character.isDigit(s.charAt(i - 1))判断字符串s中的第i-1位是否为数字。
    
