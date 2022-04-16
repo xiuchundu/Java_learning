@@ -1,6 +1,6 @@
 1. Pair的使用
    
-<font color=#FFFF00>Pairy<>(key, value)</font>用于关联键值对。通过与组合Set集合。可判断集合中有无(key、value),相比HashMap更简单。HashMap使用弊端：key值唯一，但Set<new Pair<x, y>> 通过(x,y)确定唯一一个对象。
+`Pairy<>(key, value)`用于关联键值对。通过与组合Set集合。可判断集合中有无(key、value),相比HashMap更简单。HashMap使用弊端：key值唯一，但Set<new Pair<x, y>> 通过(x,y)确定唯一一个对象。
    
 ```java
    Set<Pair<Integer, Integer>> obstacleSet = new HashSet<>();
