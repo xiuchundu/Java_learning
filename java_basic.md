@@ -22,18 +22,18 @@
       Integer.bitCount(i)
    ```
 4. 使用box去除list中的值：
-   ```java
-     public boolean remove(int val) {
-         if (map.containsKey(val)) {
-             IntStream.range(0,list.size()).filter(i->
-                 list.get(i).equals(val)).
-                 boxed().findFirst().map(i->list.remove((int)i));
-             return true;
-         }
+```java
+   public boolean remove(int val) {
+      if (map.containsKey(val)) {
+          IntStream.range(0,list.size()).filter(i->
+              list.get(i).equals(val)).
+              boxed().findFirst().map(i->list.remove((int)i));
+          return true;
+      }
 
-         return false;
-     }
-   ```
+      return false;
+   }
+```
    
 5. 使用Character.isDigit(s.charAt(i - 1))判断字符串s中的第i-1位是否为数字。
 6. 二分查找模板
