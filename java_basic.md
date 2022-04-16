@@ -36,5 +36,70 @@
         }
    ```
    
-   5. 使用Character.isDigit(s.charAt(i - 1))判断字符串s中的第i-1位是否为数字。
+5. 使用Character.isDigit(s.charAt(i - 1))判断字符串s中的第i-1位是否为数字。
+6. 二分查找模板
+(1)返回mid的二分查找模板
+   ```java
+      int binary_search(int[] nums,int target){
+      int left = 0,right = nums.length-1;
+      while(left<=right){
+         int mid = left+(right-left)/2;
+         if(nums[mid] == target) return mid;
+         else if(nums[mid] > target){
+            right = mid - 1;
+            从右端向mid逼近
+         }
+         else if(nums[mid] < target){
+            left = mid + 1;
+            从左端向mid逼近
+         }
+      }
+      return -1;
+   }
+   ```
+(2)返回left的二分查找模板
+   ```java
+   int binary_search(int[] nums,int target){
+   int left = 0, right = nums.length-1;
+   while(left<=right){
+      int mid = left+(right-left)/2;
+      if(nums[mid] == target) right = mid-1;
+      从右端向left逼近
+      else if(nums[mid] > target){
+         right = mid-1;
+         从右端向left逼近
+      }
+      else if(nums[mid] < target){
+         left = mid + 1;
+      }
+   }
+   if(left>=length || nums[left]!=target){
+      return -1;
+   } 
+   return left;
+   }
+   ```
+(3)返回right的二分查找模板
+   ```java
+      int binary_search(int[] nums,int target){
+      int left = 0,right = nums.length-1;
+      while(left<=right){
+         int mid = left+(right-left)/2;
+         if(nums[mid] == target) left = mid+1;
+         从左端向right逼近
+         else if(nums[mid] > target){
+            right = mid-1;
+         }
+         else if(nums[mid] < target){
+            left = mid+1;
+            从左端向right逼近
+         }
+      }
+      if(right<0 || nums[right]!=target){
+         return -1;
+      }
+      return right;
+      }
+   ```
+   
    
