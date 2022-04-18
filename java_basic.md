@@ -111,4 +111,56 @@
    hashmap.putIfAbsent(K key, V value)
 ```
 
-10. 
+10. Stream去重和过滤:
+```java
+    class Record {
+        int userId;
+
+        int record;
+
+        int duration;
+
+        public Record(int userId, int record, int duration) {
+            this.userId = userId;
+            this.record = record;
+            this.duration = duration;
+        }
+    }
+    
+    List<Record> recordList = new ArrayList<>();
+    
+    public int[] getTopAthletes(int num) {
+        List<Integer> collect = recordList
+            .stream()
+            .sorted(new Comparator<Record>() {
+                @Override
+                public int compare(Record o1, Record o2) {
+                    if (o1.duration == o2.duration) {
+                        return o1.record - o2.record;
+                    }
+                    return o1.duration - o2.duration;
+                }
+            })
+            .map(r -> r.userId).distinct().collect(Collectors.toList());
+
+        if (collect.size() > num) {
+            return collect.subList(0, num).stream().mapToInt(Integer::intValue).toArray();
+        } else {
+            return collect.stream().mapToInt(Integer::intValue).toArray();
+        }
+    }
+    
+    public int[] queryTop3Record(int userId) {
+        List<Integer> collect = recordList.stream().filter(r -> r.userId == userId).sorted(new Comparator<Record>() {
+            @Override
+            public int compare(Record o1, Record o2) {
+                return o1.duration - o2.duration;
+            }
+        }).map(r -> r.duration).collect(Collectors.toList());
+        if (collect.size() > 3) {
+            return collect.subList(0, 3).stream().mapToInt(Integer::intValue).toArray();
+        } else {
+            return collect.stream().mapToInt(Integer::intValue).toArray();
+        }
+    }    
+```
