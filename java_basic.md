@@ -169,4 +169,20 @@
 11. Stream流之List、Integer[]、int[]相互转化
    https://blog.csdn.net/qq_43390235/article/details/106592102
 
-12.
+12. 二分法使用注意事项: 若求最小满足的left，则：
+```java
+   if (xxx) {
+       low = mid + 1;
+   } else {
+       high = mid;
+   }
+```
+
+若求最大满足的left，则：
+```java
+   if (xxx) {
+       low = mid;
+   } else {
+       high = mid - 1;
+   }
+```
