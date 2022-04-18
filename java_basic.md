@@ -112,6 +112,7 @@
 ```
 
 10. Stream去重和过滤:
+    http://www.classinstance.cn/detail/175.html
 ```java
     class Record {
         int userId;
