@@ -21,6 +21,7 @@
 3.计算整数对应的二进制中1的个数：
    ```java
       Integer.bitCount(i)
+      String s = Integer.toBinaryString(n); // 计算整数对应的二进制1001这种的字符串值
    ```
 4. 使用box去除list中的值：
 ```java
