@@ -188,7 +188,7 @@
    }
 ```
 
-13. 统计字符串中的缩进的"\t"数量。其中包括 str.startWIth("xx"); 判断字符串是否以"xx"开头。
+13. 统计字符串中的缩进的"\t"数量，层数等于"\t"的数量。其中包括 str.startWIth("xx"); 判断字符串是否以"xx"开头。
 ```java
     public int countTab(String s){
         StringBuilder sb = new StringBuilder();
