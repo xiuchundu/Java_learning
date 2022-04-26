@@ -187,3 +187,18 @@
        high = mid - 1;
    }
 ```
+
+13. 统计字符串中的缩进的"\t"数量。其中包括 str.startWIth("xx"); 判断字符串是否以"xx"开头。
+```java
+    public int countTab(String s){
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+        for(int i = 0;; i++){
+            sb.append("\t");
+            if(s.startsWith(sb.toString()))
+                count++;
+            else
+                break;
+        }
+    }
+```
