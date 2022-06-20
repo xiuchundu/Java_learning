@@ -204,3 +204,13 @@
 ```
 
 14. str.indexOf('.') == -1表示str中无字符'.'。
+
+15. PriorityQueue比较器:比较两个属性
+```java
+   PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingInt((Node o) -> o.bikeNum).thenComparingInt((Node o) -> o.index));
+```
+
+16.
+
+
+
